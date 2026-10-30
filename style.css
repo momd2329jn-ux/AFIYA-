@@ -149,9 +149,10 @@ h1 em,h2 em{font-style:normal;color:var(--green)}
 }
 .main-nav a {
     background-color: #28594B;
-    color: #FFFEFF;
+    color: #FFFFFF;
     padding: 10px 18px;
     border-radius: 8px;
+    font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
 }
