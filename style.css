@@ -149,7 +149,7 @@ h1 em,h2 em{font-style:normal;color:var(--green)}
 }
 .main-nav a {
     background-color: #28594B;
-    color: #FFFFFF;
+    color: #FFFEFA;
     padding: 10px 18px;
     border-radius: 8px;
     font-weight: bold;
@@ -160,4 +160,7 @@ h1 em,h2 em{font-style:normal;color:var(--green)}
 .main-nav a:hover {
     background-color: #587A65;
     color: #FFFEFA;
+}
+.main-nav a[href="index.html"] {
+    color: #FFFFFF;
 }
