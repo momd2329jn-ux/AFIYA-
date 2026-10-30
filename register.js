@@ -193,7 +193,7 @@ accountButtons.forEach(button => {
         formTitle.textContent = selectedForm.title;
         dynamicFields.innerHTML = selectedForm.fields;
         formNote.textContent = selectedForm.note;
-
+formNote.style.background = selectedType === "patient" ? "transparent" : "#E8EFE7";
         registerMessage.className = "register-message";
         registerMessage.textContent = "";
 
