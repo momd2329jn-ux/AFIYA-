@@ -164,3 +164,8 @@ h1 em,h2 em{font-style:normal;color:var(--green)}
 .main-nav a[href="index.html"] {
     color: #FFFFFF;
 }
+.main-nav a:first-child,
+.main-nav a:first-child:visited,
+.main-nav a:first-child:hover {
+    color: #FFFFFF !important;
+}
