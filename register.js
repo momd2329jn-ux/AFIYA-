@@ -96,7 +96,7 @@ const accountForms = {
                 <input type="tel" name="phone" required placeholder="07xxxxxxxxx" inputmode="tel">
             </div>
         `,
-        note: "يمكن للمريض إنشاء حسابه دون انتظار موافقة المدير."
+
     },
 
     nurse: {
