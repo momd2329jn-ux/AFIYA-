@@ -96,7 +96,6 @@ const accountForms = {
                 <input type="tel" name="phone" required placeholder="07xxxxxxxxx" inputmode="tel">
             </div>
         `,
-
     },
 
     nurse: {
