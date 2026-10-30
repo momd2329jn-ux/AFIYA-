@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#28594B">
+    <title>تسجيل الدخول | عافية AFIYA</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .login-page {
+            min-height: 100vh;
+            background: #F6F1E8;
+            padding: 35px 15px 60px;
+        }
+
+        .login-top {
+            max-width: 1000px;
+            margin: 0 auto 30px;
+        }
+
+        .login-card {
+            max-width: 460px;
+            margin: 0 auto;
+            padding: 35px;
+            background: #FFFEFA;
+            border: 1px solid #E7E5DA;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(38, 63, 53, 0.07);
+        }
+
+        .login-back {
+            display: inline-flex;
+            color: #28594B;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        .login-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .login-heading h1 {
+            color: #28594B;
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        .login-heading p {
+            color: #68766B;
+            font-size: 14px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .login-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .login-group label {
+            color: #263F35;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .login-group input {
+            width: 100%;
+            min-height: 48px;
+            padding: 11px 13px;
+            border: 1px solid #D9DED6;
+            border-radius: 9px;
+            background: #FFFEFA;
+            color: #263F35;
+            font: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .login-group input:focus {
+            border-color: #28594B;
+            box-shadow: 0 0 0 3px rgba(40, 89, 75, 0.09);
+        }
+
+        .login-submit {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .login-message {
+            display: none;
+            padding: 12px;
+            border-radius: 9px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .login-message.show {
+            display: block;
+        }
+
+        .login-message.info {
+            background: #E8EFE7;
+            color: #28594B;
+        }
+
+        .login-message.error {
+            background: #F8E8E5;
+            color: #8A3028;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 23px;
+            color: #68766B;
+            font-size: 13px;
+        }
+
+        .login-footer a {
+            color: #28594B;
+            font-weight: bold;
+        }
+
+        @media (max-width: 500px) {
+            .login-card {
+                padding: 25px 19px;
+            }
+
+            .login-heading h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="login-page">
+        <div class="login-top">
+            <a class="brand" href="index.html">
+                <span class="brand-icon">✚</span>
+                <span class="brand-name">
+                    <strong>عافية</strong>
+                    <span>AFIYA</span>
+                </span>
+            </a>
+        </div>
+
+        <section class="login-card">
+            <a class="login-back" href="index.html">← العودة للرئيسية</a>
+
+            <div class="login-heading">
+                <h1>أهلًا بعودتك</h1>
+                <p>سجّلي الدخول إلى حسابك في عافية.</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="login-group">
+                    <label for="loginPhone">رقم الهاتف</label>
+                    <input
+                        type="tel"
+                        id="loginPhone"
+                        name="phone"
+                        placeholder="مثال: 07xxxxxxxxx"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        required
+                    >
+                </div>
+
+                <div class="login-group">
+                    <label for="loginPassword">كلمة المرور</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="أدخلي كلمة المرور"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div
+                    class="login-message"
+                    id="loginMessage"
+                    role="status"
+                ></div>
+
+                <button type="submit" class="btn btn-primary login-submit">
+                    تسجيل الدخول
+                </button>
+            </form>
+
+            <div class="login-footer">
+                ما عندج حساب؟
+                <a href="register.html">إنشاء حساب جديد</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

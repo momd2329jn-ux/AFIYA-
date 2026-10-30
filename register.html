@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#28594B">
+    <title>إنشاء حساب | عافية AFIYA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .register-page {
+            min-height: 100vh;
+            background: #F6F1E8;
+            padding: 35px 15px 60px;
+        }
+
+        .register-top {
+            max-width: 1000px;
+            margin: 0 auto 30px;
+        }
+
+        .register-card {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 35px;
+            background: #FFFEFA;
+            border: 1px solid #E7E5DA;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(38, 63, 53, 0.07);
+        }
+
+        .register-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .register-heading h1 {
+            color: #28594B;
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        .register-heading p {
+            color: #68766B;
+            font-size: 14px;
+        }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group label {
+            color: #263F35;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            min-height: 47px;
+            padding: 11px 13px;
+            border: 1px solid #D9DED6;
+            border-radius: 9px;
+            background: #FFFEFA;
+            color: #263F35;
+            font: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #28594B;
+            box-shadow: 0 0 0 3px rgba(40, 89, 75, 0.09);
+        }
+
+        .register-submit {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .register-message {
+            display: none;
+            padding: 12px;
+            border-radius: 9px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .register-message.show {
+            display: block;
+        }
+
+        .register-message.error {
+            background: #F8E8E5;
+            color: #8A3028;
+        }
+
+        .register-message.info {
+            background: #E8EFE7;
+            color: #28594B;
+        }
+
+        .register-footer {
+            text-align: center;
+            margin-top: 22px;
+            color: #68766B;
+            font-size: 13px;
+        }
+
+        .register-footer a {
+            color: #28594B;
+            font-weight: bold;
+        }
+
+        .register-back {
+            display: inline-flex;
+            color: #28594B;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        @media (max-width: 500px) {
+            .register-card {
+                padding: 25px 19px;
+            }
+
+            .register-heading h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="register-page">
+        <div class="register-top">
+            <a class="brand" href="index.html">
+                <span class="brand-icon">✚</span>
+                <span class="brand-name">
+                    <strong>عافية</strong>
+                    <span>AFIYA</span>
+                </span>
+            </a>
+        </div>
+
+        <section class="register-card">
+            <a class="register-back" href="index.html">← العودة للرئيسية</a>
+
+            <div class="register-heading">
+                <h1>إنشاء حساب جديد</h1>
+                <p>انضمي إلى عافية وابدئي بالتعرّف على خدماتنا.</p>
+            </div>
+
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="اكتبي اسمك الكامل"
+                        autocomplete="name"
+                        required
+                        minlength="3"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="مثال: 07xxxxxxxxx"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="accountType">نوع الحساب</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="">اختاري نوع الحساب</option>
+                        <option value="patient">مريض / مستفيد من الخدمة</option>
+                        <option value="nurse">ممرض / ممرضة</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="8 أحرف أو أرقام على الأقل"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">تأكيد كلمة المرور</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="أعيدي كتابة كلمة المرور"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="register-message" id="registerMessage" role="status"></div>
+
+                <button type="submit" class="btn btn-primary register-submit">
+                    إنشاء الحساب
+                </button>
+            </form>
+
+            <div class="register-footer">
+                عندج حساب مسبقًا؟
+                <a href="login.html">تسجيل الدخول</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="register.js"></script>
+</body>
+</html>
