@@ -74,8 +74,7 @@
             color: #68766B;
         }
 
-        .account-type:hover,
-        .account-type.active {
+        .account-type:hover {
             border-color: #28594B;
             background: #E8EFE7;
             box-shadow: 0 0 0 2px rgba(40,89,75,.08);
@@ -85,7 +84,7 @@
             color: #28594B;
             border-bottom: 1px solid #E7E5DA;
             padding-bottom: 12px;
-            margin: 25px 0 18px;
+            margin: 15px 0 18px;
             font-size: 19px;
         }
 
@@ -195,8 +194,13 @@
 
         .register-back {
             display: inline-block;
-            margin-bottom: 22px;
+            margin-bottom: 15px;
             font-size: 14px;
+            text-decoration: none;
+        }
+
+        .register-back:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 550px) {
@@ -233,36 +237,50 @@
         <a class="register-back" href="index.html">← العودة للرئيسية</a>
 
         <div class="register-heading">
-            <h1>إنشاء حساب جديد</h1>
-            <p>اختار نوع الحساب حتى نعرض لك استمارة التسجيل المناسبة.</p>
+            <h1 id="pageHeading">إنشاء حساب جديد</h1>
+            <p id="pageDescription">اختار نوع الحساب حتى نعرض لك استمارة التسجيل المناسبة.</p>
         </div>
 
-        <div class="account-types">
-            <button type="button" class="account-type" data-type="patient">
-                <strong>مريض</strong>
-                <span>طلب خدمات الرعاية المنزلية</span>
-            </button>
+        <!-- واجهة اختيار نوع الحساب -->
+        <div id="accountSelection">
 
-            <button type="button" class="account-type" data-type="nurse">
-                <strong>ممرض / ممرضة</strong>
-                <span>تقديم خدمات التمريض</span>
-            </button>
+            <div class="account-types">
 
-            <button type="button" class="account-type" data-type="doctor">
-                <strong>طبيب</strong>
-                <span>تقديم الخدمات الطبية</span>
-            </button>
+                <button type="button" class="account-type" data-type="patient">
+                    <strong>مريض</strong>
+                    <span>طلب خدمات الرعاية المنزلية</span>
+                </button>
 
-            <button type="button" class="account-type" data-type="lab">
-                <strong>مختبر / محلل</strong>
-                <span>الخدمات والفحوصات المختبرية</span>
-            </button>
+                <button type="button" class="account-type" data-type="nurse">
+                    <strong>ممرض / ممرضة</strong>
+                    <span>تقديم خدمات التمريض</span>
+                </button>
+
+                <button type="button" class="account-type" data-type="doctor">
+                    <strong>طبيب</strong>
+                    <span>تقديم الخدمات الطبية</span>
+                </button>
+
+                <button type="button" class="account-type" data-type="lab">
+                    <strong>مختبر / محلل</strong>
+                    <span>الخدمات والفحوصات المختبرية</span>
+                </button>
+
+            </div>
+
         </div>
 
+        <!-- واجهة التسجيل الخاصة بالصنف المختار -->
         <div id="formArea" hidden>
+
+            <button type="button" class="register-back" id="backToTypes">
+                ← العودة لاختيار نوع الحساب
+            </button>
+
             <h2 class="form-title" id="formTitle"></h2>
 
             <form class="register-form" id="registerForm">
+
                 <div id="dynamicFields" class="form-grid"></div>
 
                 <div class="form-note" id="formNote"></div>
@@ -272,7 +290,9 @@
                 <button type="submit" class="btn btn-primary register-submit">
                     إرسال طلب إنشاء الحساب
                 </button>
+
             </form>
+
         </div>
 
         <div class="register-footer">
