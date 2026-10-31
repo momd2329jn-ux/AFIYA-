@@ -71,7 +71,8 @@
             font-weight: bold;
         }
 
-        .login-group input {
+        .login-group input,
+        .login-group select {
             width: 100%;
             min-height: 48px;
             padding: 11px 13px;
@@ -84,7 +85,8 @@
             outline: none;
         }
 
-        .login-group input:focus {
+        .login-group input:focus,
+        .login-group select:focus {
             border-color: #28594B;
             box-shadow: 0 0 0 3px rgba(40, 89, 75, 0.09);
         }
@@ -142,6 +144,7 @@
 
 <body>
     <main class="login-page">
+
         <div class="login-top">
             <a class="brand" href="index.html">
                 <span class="brand-icon">✚</span>
@@ -153,16 +156,31 @@
         </div>
 
         <section class="login-card">
+
             <a class="login-back" href="index.html">← العودة للرئيسية</a>
 
             <div class="login-heading">
                 <h1>أهلًا بعودتك</h1>
-                <p>سجّلي الدخول إلى حسابك في عافية.</p>
+                <p>اختار نوع حسابك وسجّل الدخول إلى عافية.</p>
             </div>
 
             <form class="login-form" id="loginForm">
+
+                <div class="login-group">
+                    <label for="accountType">نوع الحساب</label>
+
+                    <select id="accountType" name="accountType" required>
+                        <option value="">اختار نوع الحساب</option>
+                        <option value="patient">مريض</option>
+                        <option value="nurse">ممرض / ممرضة</option>
+                        <option value="doctor">طبيب</option>
+                        <option value="lab">مختبر / محلل</option>
+                    </select>
+                </div>
+
                 <div class="login-group">
                     <label for="loginPhone">رقم الهاتف</label>
+
                     <input
                         type="tel"
                         id="loginPhone"
@@ -174,15 +192,15 @@
                     >
                 </div>
 
-                <div class="login-group">
+                <div class="login-group" id="passwordGroup" hidden>
                     <label for="loginPassword">كلمة المرور</label>
+
                     <input
                         type="password"
                         id="loginPassword"
                         name="password"
                         placeholder="أدخلي كلمة المرور"
                         autocomplete="current-password"
-                        required
                     >
                 </div>
 
@@ -195,12 +213,14 @@
                 <button type="submit" class="btn btn-primary login-submit">
                     تسجيل الدخول
                 </button>
+
             </form>
 
             <div class="login-footer">
                 ما عندج حساب؟
                 <a href="register.html">إنشاء حساب جديد</a>
             </div>
+
         </section>
     </main>
 
